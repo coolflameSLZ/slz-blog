@@ -109,5 +109,5 @@ browsersync:
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: 'git'
-  repo: 'https://github.com/coolflameSLZ/coolflameSLZ.github.io'
-  branch: publish
+  repo: 'https://github.com/coolflameSLZ/coolflameSLZ.github.io.git'
+  branch: master

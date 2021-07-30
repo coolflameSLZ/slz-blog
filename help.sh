@@ -1,10 +1,12 @@
+
+
 # 指令教程： https://hexo.io/zh-cn/docs/commands
 
-# 新建文章
-hexo new --path "技术规范/mysql开发规范" "mysql开发规范"
+# fluid 教程：https://hexo.fluid-dev.com/docs/guide
 
-# 新建草稿
-hexo new draft --path "技术规范/API设计规范" "API设计规范"
+# 新建文章
+hexo new --path "技术规范/分支规范" "分支规范"
+
 
 # 生成静态文件
 hexo generate --deploy --force

@@ -3,7 +3,7 @@ title: mysql开发规范
 date: 2021-07-27 22:53:44
 toc: true 
 
-excerpt: 可以落地的mysql使用规范
+excerpt: 不会出大问题的mysql开发规范，一般情况下。无脑遵守就好
 
 categories:
 - 后端
