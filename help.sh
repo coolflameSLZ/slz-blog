@@ -5,7 +5,7 @@
 # fluid 教程：https://hexo.fluid-dev.com/docs/guide
 
 # 新建文章
-hexo new --path "技术规范/分支规范" "分支规范"
+hexo new --path "注册中心/注册中心的选型与设计" "注册中心的选型与设计"
 
 
 # 生成静态文件

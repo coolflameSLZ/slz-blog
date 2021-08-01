@@ -3,8 +3,6 @@ title: mysql开发规范
 date: 2021-07-27 22:53:44
 toc: true 
 
-excerpt: 不会出大问题的mysql开发规范，一般情况下。无脑遵守就好
-
 categories:
 - 后端
 
@@ -12,13 +10,17 @@ tags:
 - mysql
 - 技术规范
 - 设计
+
+hide: false
 ---
 
+
+
+http设计规范，设计接口后，可以对照自查表自省一下。
+
+<!-- more -->
+
 ------
-
-
-
-[TOC]
 
 
 
@@ -44,16 +46,12 @@ tags:
 ## **索引规范**
 
 1. 联合索引的字段数目不能超过5，单表索引数量也不能超过5，索引设计遵循B+ Tree最左前匹配原则
-
 2. 对一个VARCHAR(N)列创建索引时，通常取其50%（甚至更小）左右长度创建前缀索引就足以满足80%以上的查询需求了，没必要创建整列的全长度索引  
-
 3. 根据业务命名空间的顺序构造联合索引，比如 productId/userId/serviceId/time/xxx
-
 4. order by ， group by 的字段需要建立索引，尽量不使用groupby，orderby 使用java进程完成此操作
-
 5. 业务上的全局唯一字段，需要建立唯一索引
-
 6. 事物中，如 SELECT * FROM yes WHERE name ='yes' FOR UPDATE; <br>通过等普通条件判断【name = xxx】进行筛选加锁时，则该列（name）需要加索引。否则容易锁表。
+7. 索引是要建在尽量不改动的字段上，频繁的变动索引列，对系统压力较大
 
 
 
