@@ -5,7 +5,7 @@
 # fluid 教程：https://hexo.fluid-dev.com/docs/guide
 
 # 新建文章
-hexo new --path "注册中心/注册中心的选型与设计" "注册中心的选型与设计"
+hexo new --path "消息系统/kafka【5】命令行工具" "kafka【5】命令行工具"
 
 
 # 生成静态文件

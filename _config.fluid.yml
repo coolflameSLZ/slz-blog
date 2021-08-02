@@ -391,7 +391,7 @@ post:
     # 目录会选择这些节点作为标题
     headingSelector: "h1,h2,h3,h4,h5,h6"
     # 层级的折叠深度，0 是全部折叠，大于 0 后如果存在下级标题则默认展开
-    collapseDepth: 0
+    collapseDepth: 4
 
   # 版权声明，会显示在每篇文章的结尾
   copyright:
@@ -467,7 +467,7 @@ category:
   # Options: length | name
   order_by: "-name"
   # 层级的折叠深度，0 是全部折叠，大于 0 后如果存在子分类则默认展开
-  collapse_depth: 5
+  collapse_depth: 10
   # 文章的排序字段，前面带减号是倒序，不带减号是正序 # Options: date | title | or other field of front-matter
   post_order_by: "sortn"
   # 单个分类中折叠展示文章数的最大值，超过限制会显示 More，0 则不限制
