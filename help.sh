@@ -5,7 +5,7 @@
 # fluid 教程：https://hexo.fluid-dev.com/docs/guide
 
 # 新建文章
-hexo new --path "技术规范/常见后端排错流程" "常见后端排错流程"
+hexo new --path "写代码避坑指南/java【2】对象处理.md" "java【2】对象处理"
 
 
 # 生成静态文件
