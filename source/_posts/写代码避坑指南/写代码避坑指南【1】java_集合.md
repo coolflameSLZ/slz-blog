@@ -8,16 +8,14 @@ tags:
   - java
   - 实用开发小抄
 
-hide: true
+hide: false
 sortn: 10
 date: 2021-08-03 01:27:34
 ---
 
 
 
-我们从常用的“坑”出发，给你一个简单的避坑小抄，具体原因先不展开，只用一句话提示。
-
-本节主要讲的是 java 容器类常见的坑。
+java集合类，避坑指南。背了这么原理和实现，你真的能用对么？远离八股文工程师！
 
 <!-- more -->
 
@@ -27,15 +25,13 @@ date: 2021-08-03 01:27:34
 
 ## 写java避坑指南【1】有关collect包
 
+多线程中，使用线程不安全的容器，后果不仅仅是数据不对，还可能导致程序死循环。<br>**不要无脑使用 线程不安全 容器**。
+
 
 
 ### Map
 
-
-
 #### 线程不安全
-
-- 多线程中，使用线程不安全的容器，后果不仅仅是数据不对，还可能导致程序死循环。所以还是不能无脑使用现成不安全的容器。
 
 - HashMap，中规中矩，默认使用。
 - Treemap，实现了SortedMap，放入的Key必须实现`Comparable`接口，有key排序首选使用。
@@ -48,9 +44,9 @@ date: 2021-08-03 01:27:34
 
 #### 线程安全
 
-- concurrenthashmap，中规中矩，默认使用。
+- concurrenthashmap，中规中矩，默认使用。但他的get、size 等方法没有用到锁，有可能获得旧的数据。
 
-- hashtable，当必须保证强一致性时使用。concurrenthashmap中的get、size 等方法没有用到锁，有可能获得旧的数据。
+- hashtable，当必须保证强一致性时使用。
 
 - concurrentSkipListMap，超大数据量(万级别)时候使用，且存在大量增删改操作的时候使用，在高并发下，跳表性能表现反超 concurrenthashmap。（红黑树在并发情况下，删除和插入过程中有个平衡的过程，锁竞争度会升高几个级别）
 
@@ -87,7 +83,7 @@ date: 2021-08-03 01:27:34
 
 - 默认情况下一律使用ArrayList
 - 有去重需要，默认使用HashSet
-- 去重 + 重新排序使用TreeSet。
+- 去重 + 重新排序 使用TreeSet。
 - web开发中经常需要空 List。使用 `Collections.emptyList();`
 - LinkedList，随机读性能很烂，业务开发没有使用场景，不建议使用
 
@@ -98,7 +94,7 @@ date: 2021-08-03 01:27:34
 - 线程安全List，首选 `Colletcions.synchronizedList(new ArrayList<>());` 各方面都没有问题。
 - 线程安全Set，JDK没有提供，可以使用hutool实现的 [线程安全的HashSet-ConcurrentHashSet](https://www.hutool.cn/docs/#/core/集合类/线程安全的HashSet-ConcurrentHashSet?id=线程安全的hashset-concurrenthashset)
 - 线程安全的队列，使用hutool实现的，[有界优先队列-BoundedPriorityQueue](https://www.hutool.cn/docs/#/core/集合类/有界优先队列-BoundedPriorityQueue?id=有界优先队列-boundedpriorityqueue)
-- DelayQueue 延时队列，一般情况下不会使用，非要使用，切记不能使用纳秒为单位。<br>（纳秒会让cpu负载上升几个数量将）
+- DelayQueue 延时队列，阻塞的，一般情况下不会使用，非要使用，切记不能使用纳秒为单位。<br>（纳秒会让cpu负载上升几个数量将）
 - CopyOnWriteArrayList 并发版ArrayList，这个容器写成本非常高，一般没有使用场景，如需并发写，ArrayList加锁即可。
 
 

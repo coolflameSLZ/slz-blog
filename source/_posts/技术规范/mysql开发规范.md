@@ -4,7 +4,7 @@ date: 2021-07-27 22:53:44
 toc: true 
 
 categories:
-- 后端
+- 技术规范
 
 tags:
 - mysql

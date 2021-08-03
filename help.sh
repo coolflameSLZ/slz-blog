@@ -5,7 +5,7 @@
 # fluid 教程：https://hexo.fluid-dev.com/docs/guide
 
 # 新建文章
-hexo new --path "写代码避坑指南/写代码避坑指南【1】java.collect包" "写代码避坑指南【1】java.collect包"
+hexo new --path "技术规范/常见后端排错流程" "常见后端排错流程"
 
 
 # 生成静态文件
