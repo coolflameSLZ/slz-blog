@@ -5,7 +5,7 @@
 # fluid 教程：https://hexo.fluid-dev.com/docs/guide
 
 # 新建文章
-hexo new --path "消息系统/kafka【5】命令行工具" "kafka【5】命令行工具"
+hexo new --path "写代码避坑指南/写代码避坑指南【1】java.collect包" "写代码避坑指南【1】java.collect包"
 
 
 # 生成静态文件
