@@ -254,11 +254,11 @@ scroll_top_arrow:
 footer:
   # 页脚第一行文字的 HTML，建议保留 Fluid 的链接，用于向更多人推广本主题
   content: ''
-#  content: '
-#    <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a>
-#    <i class="iconfont icon-love"></i>
-#    <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a>
-#  '
+  #  content: '
+  #    <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a>
+  #    <i class="iconfont icon-love"></i>
+  #    <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a>
+  #  '
 
   # 展示网站的 PV、UV 统计数
   statistics:
@@ -288,7 +288,7 @@ footer:
 #---------------------------
 index:
   # 首页 Banner 头图，可以是相对路径或绝对路径，以下相同
-#   banner_img: 'https://cdn.jsdelivr.net/gh/coolflameSLZ/img/img20210730103520.png'
+  #   banner_img: 'https://cdn.jsdelivr.net/gh/coolflameSLZ/img/img20210730103520.png'
   banner_img: 'https://cdn.jsdelivr.net/gh/coolflameSLZ/img/img20210730105027.png'
   # 头图高度，屏幕百分比 # Available: 0 - 100
   banner_img_height: 35
@@ -396,7 +396,7 @@ post:
   # 版权声明，会显示在每篇文章的结尾
   copyright:
     enable: true
-    content: '本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！'
+    content: '本博客禁止转载，笔者保留诉讼权利！'
 
   # 文章底部上一篇下一篇功能
   prev_next:
