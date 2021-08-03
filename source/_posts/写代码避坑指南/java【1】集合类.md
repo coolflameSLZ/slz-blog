@@ -1,5 +1,5 @@
 ---
-stitle: java【1】集合类
+title: java【1】集合类
 toc: true
 categories:
   - 写代码避坑指南
@@ -7,13 +7,10 @@ categories:
 tags:
   - java
   - 实用开发小抄
-
 hide: false
-sortn: 10
-date: 2021-08-03 01:27:34
+sortn: 20
+date: 2021-08-04 02:08:33
 ---
-
-
 
 java集合类，避坑指南。背了这么原理和实现，你真的能用对么？远离八股文工程师！
 
