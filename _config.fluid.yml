@@ -396,7 +396,7 @@ post:
   # 版权声明，会显示在每篇文章的结尾
   copyright:
     enable: true
-    content: '本博客禁止转载，笔者保留诉讼权利！'
+    content: '转载到其他公开平台，需经过笔者同意（微信coolflamingo），笔者保留诉讼权利！'
 
   # 文章底部上一篇下一篇功能
   prev_next:

@@ -14,7 +14,7 @@ date: 2021-08-04 02:08:33
 
 
 
-java对象操作，避坑指南。背了这么原理和实现，你真的能用对么？远离八股文工程师！
+java对象操作，避坑指南。背了这么原理和实现，你真的能用对么？背八股文一时爽，实战派才能突破愚昧之巅， show you code now。
 <!-- more -->
 
 ------
@@ -211,4 +211,21 @@ MySQL 中 对 NULL进行判断只能使用 IS NULL 或 者 IS NOT NULL。
 最终，占用的内存达到了 200M + 400M + 200M = 800M
 
 **在进行容量评估时，我们不能认为一份数据在程序内存中也是一份，数据转换的时候，往往需要成倍的空间，即使将将满足，也会频繁Full GC。**
+
+mybatis 大量返回集，请使用 流式查询语句。
+
+```java
+/** XXXmapper.java  **/
+@Select("select * from t_iot where name = #{name} ")
+@Options(resultSetType = ResultSetType.FORWARD_ONLY, fetchSize = 1024)
+@ResultType(InfoPO.class)
+void selectAutoList(@Param("name") String name,ResultHandler<InfoPO> handler);
+
+
+/** 使用 **/
+infoMapper.selectAutoList(name, resultContext -> {
+  	resultContext.getResultObject();
+  	// do something
+});
+```
 
