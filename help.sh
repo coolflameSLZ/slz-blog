@@ -5,7 +5,9 @@
 # fluid 教程：https://hexo.fluid-dev.com/docs/guide
 
 # 新建文章
-hexo new --path "写代码避坑指南/java【1】集合类.md" "java【1】集合类"
+hexo new --path "写代码避坑指南/java【3】数据库篇.md" "java【3】数据库篇"
+hexo new --path "中间件/java【1】集合类.md" "java【1】集合类"
+hexo new --path "redis/.md" "java【1】集合类"
 
 
 # 生成静态文件
